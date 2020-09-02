@@ -1,0 +1,168 @@
+    <tr>
+	<td>1</td>
+	<td>Tegangan Menengah di Titik Pemakaian</td>
+	<td>kV</td>
+	<td>20</td>
+	<td>
+		{% if status[0][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator1/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>2</td>
+	<td>Tegangan Rendah di Titik Pemakaian</td>
+	<td>V</td>
+	<td>220</td>
+	<td>
+		{% if status[1][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator2/{{tahun}}/{{data}}?phasa=1" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>3</td>
+	<td>Frekuensi di Titik Pemakaian</td>
+	<td>Hz</td>
+	<td>50</td>
+	<td>
+		{% if status[2][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator3/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>4</td>
+	<td>Lama Gangguan per Pelanggan</td>
+	<td>jam / bulan</td>
+	<td>1</td>
+	<td> 
+		{% if status[3][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator4/{{tahun}}/{{data}}?indikator=4" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>5</td>
+	<td>Jumlah Gangguan per Pelanggan</td>
+	<td>kali / bulan</td>
+	<td>2</td>
+	<td> 
+		{% if status[4][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator5/{{tahun}}/{{data}}?indikator=5" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>6</td>
+	<td>Kecepatan Pelayanan Sambungan Baru TM</td>
+	<td>hari kerja</td>
+	<td>15</td>
+	<td>
+		{% if status[5][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator6/{{data}}/1" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>7</td>
+	<td>Kecepatan Pelayanan Sambungan Baru TR</td>
+	<td>hari kerja</td>
+	<td>3</td>
+	<td>
+		{% if status[6][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator7/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>8</td>
+	<td>Kecepatan Pelayanan Sambungan Daya TM</td>
+	<td>hari kerja</td>
+	<td>15</td>
+	<td>
+		{% if status[7][0]> 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator8/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>9</td>
+	<td>Kecepatan Pelayanan Sambungan Daya TR</td>
+	<td>hari kerja</td>
+	<td>3</td>
+	<td>
+		{% if status[8][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator9/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>10</td>
+	<td>Kecepatan Menanggapi Gangguan </td>
+	<td>jam</td>
+	<td>60</td>
+	<td>
+		{% if status[9][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator10/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>11</td>
+	<td>Kesalahan Pembacaan kWh Meter</td>
+	<td>kali/triwulan/pelanggan</td>
+	<td>1</td>
+	<td>
+		{% if status[10][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator11/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>
+    <tr>
+	<td>12</td>
+	<td>Waktu Koreksi Kesalahan Rekening</td>
+	<td>hari kerja</td>
+	<td>3</td>
+	<td>
+		{% if status[11][0] > 0 %}
+			<span class="text-danger"> TIDAK TERCAPAI </span>
+    		{% else %}
+        		<span class="text-primary"> TERCAPAI </span>
+    		{% endif %}
+	</td> 
+	<td class="text-center"><a href="/tmp/indikator12/{{tahun}}/{{data}}" title="Detail"><i class="fa fa-dot-circle-o h5"></i></a></td>
+    </tr>

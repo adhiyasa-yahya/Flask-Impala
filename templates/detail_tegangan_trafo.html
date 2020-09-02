@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %} 
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navb	ar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" title="enu">
+                                <i class="glyphicon glyphicon-align-left"></i> 
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			
+                            <ul class="nav navbar-nav navbar-right">
+                                <li style="font-size: 20px;">  </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+		
+		<p><a onclick="goBack()" class="text-muted h5"><i class="fa fa-arrow-left mr-2" aria-hidden="true"></i>kembali</a></p>
+
+		<div class="panel with-nav-tabs panel-default">
+			<div class="panel-heading"> 
+				<ul class="nav nav-tabs" >
+					<li class="active"><a data-toggle="tab">{{ panel_title }}</a></li>
+					{% if phasa %}
+					<div class="pull-right">
+					 <div class="form-group mb-0" style="margin-bottom: 0;">
+					  <label class="my-1 mr-2">Phasa</label>
+					  <select class="custom-select my-1 mr-sm-2 " id="phasa">
+					    <option value="0" selected disabled>Pilih phasa...</option>
+					    <option value="1" {% if phasa == '1' %} selected  {% endif %} >1</option>
+					    <option value="3" {% if phasa == '3' %} selected  {% endif %}>3</option> 
+					  </select>
+				       </div>
+			            </div> 
+				    {% endif %}
+				</ul> 
+			</div>
+			<div class="panel-body">  
+			<div class="table-responsive tab-pane fade in active">
+				<table id="list_user" class="display" style="width:100%">
+					<thead>
+					    <tr>
+						<th>No</th>
+						<th>Alamat</th> 
+						<th>Nomor Gardu</th> 
+						<th>Tegangan TM</th> 
+						<!-- <th class="text-center">Detail</th> -->
+					    </tr>
+					</thead>
+					<tbody>
+						 {% for i in range(0, len) %}
+						    <tr>
+						      <td> {{ i+1 }} </td>
+						      <td>{{ row[i][4] }}</td> 
+						      <td>{{ row[i][6] }}</td> 
+						      <td>{{ row[i][29] }}</td> 
+						      <!-- <td class="text-center"><a href="#" title="Detail User"><i class="fa fa-align-justify h5"></i></a></td> -->
+						    </tr>
+						 {% endfor %}
+					</tbody>
+				</table>
+			</div>
+		     </div>
+		</div>
+     {% endblock %}
